@@ -1,0 +1,21 @@
+{
+    "name": "astrolus",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+        "dev": "astro dev",
+        "start": "astro dev",
+        "build": "astro build",
+        "preview": "astro preview",
+        "astro": "astro"
+    },
+    "dependencies": {
+        "astro": "^1.9.2",
+        "prettier": "^2.8.3",
+        "prettier-plugin-tailwindcss": "^0.2.1",
+        "tailwindcss": "^3.2.4"
+    },
+    "devDependencies": {
+        "@astrojs/tailwind": "^1.0.0"
+    }
+}
