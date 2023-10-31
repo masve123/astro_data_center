@@ -1,6 +1,8 @@
 ---
 import Container from "./Container.astro";
 import ContactForm from "./ContactForm.astro";  // Importing the ContactForm
+import SolutionContent from "./SolutionContent.astro";
+import Products from "./Products.astro";
 // You can import other specific components like Products or SolutionContent if needed.
 ---
 
@@ -8,9 +10,10 @@ import ContactForm from "./ContactForm.astro";  // Importing the ContactForm
     <Container>
         <div class="flex-row-reverse items-center justify-between space-y-12 text-gray-600 md:flex md:gap-6 lg:gap-12 lg:space-y-0">
             <div class="relative ml-auto h-full md:w-1/2">
-                <img class="dark:hidden" src="./images/contact-us-image.webp" alt="Contact Us Image" width="1174" height="1134" />
-                <img class="hidden dark:block" src="./images/contact-us-image-dark.webp" alt="Contact Us Image" width="1174" height="1134" />
+                <img class="dark:hidden" src="./images/milestone.webp" alt="app milestone" width="1174" height="1134" />
+                <img class="hidden dark:block" src="./images/milestone-dark.webp" alt="app milestone" width="1174" height="1134" />
             </div>
+            
 
             <div class="md:w-1/2 lg:w-[47%]">
                 <h2 class="text-3xl font-bold text-gray-900 dark:text-white md:text-4xl lg:text-5xl">Get in Touch with Us</h2>
@@ -22,9 +25,6 @@ import ContactForm from "./ContactForm.astro";  // Importing the ContactForm
                 <ContactForm />  <!-- Using the ContactForm here -->
             </div>
         </div>
-
-        <!-- You can add more sections like Products or SolutionContent if relevant for Contact Us -->
-        <!-- Example: <ContactForm /> -->
 
     </Container>
 </div>
