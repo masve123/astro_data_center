@@ -1,6 +1,6 @@
 # Astrolus
 
-Modern and beautiful Sass landing page built with tailwindcss and astro
+Modern Sass landing page built with tailwindcss and astro
 
 ## 🚀 Project Structure
 
@@ -19,6 +19,7 @@ Inside of your Astro project, you'll see the following folders and files:
 │       └── index.astro
 └── package.json
 ```
+Note; there may be changes to this structure in the recent commit.
 
 Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
