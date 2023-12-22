@@ -16,3 +16,8 @@ sdsdsd
 
 sdsdsd
 
+Here is what we did today:
+- Created a new blog post
+- Added some content to it
+- Pushed it to GitHub
+
