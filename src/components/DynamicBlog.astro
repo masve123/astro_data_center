@@ -1,0 +1,47 @@
+---
+import Container from "./Container.astro";
+
+// Ensure the glob pattern is correct relative to this file
+const posts = await Astro.glob('../posts/**/*.md');
+---
+
+<!-- <Container>
+    <div class="py-16 text-center">
+        <h1 class="text-5xl font-black dark:text-white md:text-6xl">Blog</h1>
+        <p class="mt-4 text-lg text-gray-700 dark:text-gray-100">Latest insights and stories from our team.</p>
+    </div>
+    <div class="blog-posts space-y-12">
+      {posts.map((post) => {
+        const contentHtml = post.compiledContent;
+        return (
+          <article class="p-8 rounded-lg shadow-lg bg-white dark:bg-gray-800">
+            <h2 class="text-3xl font-bold text-gray-900 dark:text-white">{post.frontmatter.title}</h2>
+            <p class="mt-2 text-gray-600 dark:text-gray-300">Published on {post.frontmatter.date} by {post.frontmatter.author}</p>
+            <div class="prose dark:prose-dark mt-6" set:html={contentHtml}></div>
+          </article>
+        );
+      })}
+    </div>
+</Container> -->
+
+<Container>
+    <div class="py-16 text-center">
+        <h1 class="text-5xl font-black dark:text-white md:text-6xl">Blog</h1>
+        <p class="mt-4 text-lg text-gray-700 dark:text-gray-100">Latest insights and stories from our team.</p>
+    </div>
+    <div class="blog-posts space-y-12">
+      {posts.map((post) => {
+        // Make sure to call the compiledContent getter
+        const contentHtml = post.compiledContent;
+        return (
+          <article class="p-8 rounded-lg shadow-lg bg-white dark:bg-gray-800">
+            <h2 class="text-3xl font-bold text-gray-900 dark:text-white">{post.frontmatter.title}</h2>
+            <p class="mt-2 text-gray-600 dark:text-gray-300">Published on {post.frontmatter.date} by {post.frontmatter.author}</p>
+            {/* Add the prose class for styling and text color for visibility */}
+            <div class="prose dark:prose-dark markdown-content text-gray-900" set:html={contentHtml}></div>
+          </article>
+        );
+      })}
+    </div>
+</Container>
+
