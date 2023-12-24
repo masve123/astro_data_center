@@ -5,6 +5,7 @@ author: "Mathias Svendsen"
 thumbnail: "/images/hero.webp" # edit this
 description: "This is a short summary of what my first blog post is about."
 url: "/blog/my-first-post"
+slug: "2023-12-22-my-first-post"
 ---
 
 This is my first blog post. I hope you like it!
