@@ -2,6 +2,9 @@
 title: "My First Blog Post"
 date: "2023-12-22"
 author: "Mathias Svendsen"
+thumbnail: "/images/hero.webp" # edit this
+description: "This is a short summary of what my first blog post is about."
+url: "/blog/my-first-post"
 ---
 
 This is my first blog post. I hope you like it!
@@ -20,3 +23,5 @@ Here is a picture for testing purposes:
 And here's a vector graphic:
 
 ![Company Logo](/images/clients/netflix.svg "Company Logo")
+
+incoming: vector databases and similarity search
