@@ -1,0 +1,98 @@
+---
+import Container from "./Container.astro";
+import Feature from "./Feature.astro";
+---
+
+<div class="relative pt-32 md:pt-44 animate-rise" id="features">
+    <Container>
+        <div class="mx-auto md:w-3/5">
+            <h2 class="text-center text-3xl font-bold text-gray-900 dark:text-white md:text-4xl lg:text-5xl">Shaped to meet your needs</h2>
+            <p class="mt-4 text-center text-gray-600 dark:text-gray-300">
+                Our computing solutions are custom-built for the next wave of data-processing. 
+                Stay fast, secure, and flexible—everything you need to tackle big tasks without a hitch.</p>
+        </div>
+
+        <div class="flex flex-wrap justify-center items-stretch gap-8">
+            <div class="flex flex-col items-center justify-between gap-6 p-8 py-16 lg:py-8 w-full lg:w-1/3">
+                <img class="w-16" src="./images/supercomputer.png" alt="HPC icon illustration" loading="lazy" />
+                <div class="flex-grow text-center">
+                    <h2 class="text-xl font-semibold text-gray-900 dark:text-white">AI Inference</h2>
+                    <p class="text-gray-600 dark:text-gray-400">Elevate your operations with our state-of-the-art High Performance Computing solutions. Accelerate your data processing and achieve more in less time.</p>
+                </div>
+                <a href="#learn-more" class="inline-block px-6 py-2 text-sm font-medium leading-6 text-center text-white transition bg-blue-600 rounded shadow hover:bg-blue-500 focus:shadow-outline active:bg-blue-700">Learn more</a>
+            </div>
+            <!-- Second copy -->
+            <div class="flex flex-col items-center justify-between gap-6 p-8 py-16 lg:py-8 w-full lg:w-1/3">
+                <img class="w-16" src="./images/artificial-intelligence.png" alt="HPC icon illustration" loading="lazy" />
+                <div class="flex-grow text-center">
+                    <h2 class="text-xl font-semibold text-gray-900 dark:text-white">VFX & Rendering Solutions</h2>
+                    <p class="text-gray-600 dark:text-gray-400">Boost your VFX and rendering projects with cloud scalability. Enjoy flexible workstations, limitless rendering, and integrated storage for faster iterations and on-budget delivery.</p>
+                </div>
+                <a href="#learn-more" class="inline-block px-6 py-2 text-sm font-medium leading-6 text-center text-white transition bg-blue-600 rounded shadow hover:bg-blue-500 focus:shadow-outline active:bg-blue-700">Learn more</a>
+            </div>
+            <!-- Third copy (if needed, you can copy and paste the second one and modify the content accordingly) -->
+        </div>
+        
+                <div class="relative grid overflow-hidden rounded-[1.25rem] bg-gray-100 p-1 dark:bg-gray-800/50 sm:grid-cols-2">
+                    <Feature title="Advanced Security" 
+                            description=" Deploying multi-layered security measures to ensure data integrity and protection against unauthorized access and threats. Your data's safety is our utmost priority."  
+                            buttonLink="/whysnowcell" 
+                            buttonText="Learn More">
+                        <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="m-auto h-6 w-6 text-gray-700 dark:text-white">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"></path>
+                        </svg> -->
+                        <img src="/images/data-security.png" alt="Advanced Security" class="m-auto h-7 w-7 text-gray-700 dark:text-white" />
+                    </Feature>
+
+                    <Feature title="Pay-as-you-go" 
+                            description="Benefit from our serverless solutions with transparent and flexible billing. Only pay for the compute power you utilize, ensuring efficient scaling of resources without the fear of overpaying."
+                            buttonLink="/whysnowcell" 
+                            buttonText="Learn More">
+                        <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="m-auto h-6 w-6 text-gray-700 dark:text-white">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z"></path>
+                        </svg> -->
+                        <img src="/images/pay.png" alt="Pay-as-you-go" class="m-auto h-7 w-7 text-gray-700 dark:text-white" />
+                    </Feature>
+
+                    <Feature title="Ultra-Fast Performance" 
+                            description="Leveraging the latest in HPC technology to provide blazing-fast computational speeds. Ensure rapid data processing and reduced time-to-insight."
+                            buttonLink="/whysnowcell" 
+                            buttonText="Learn More">
+                        <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="m-auto h-6 w-6 text-gray-700 dark:text-white">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"></path>
+                        </svg> -->
+                        <img src="/images/work-speed.png" alt="Ultra-Fast Performance" class="m-auto h-7 w-7 text-gray-700 dark:text-white" />
+                    </Feature>
+
+                    <Feature title="Scalable Solutions" 
+                            description="Our modular and scalable solutions adapt to your growing computational needs. Expand seamlessly without compromising on performance."
+                            buttonLink="/whysnowcell" 
+                            buttonText="Learn More">
+                        <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="m-auto h-6 w-6 text-gray-700 dark:text-white">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
+                        </svg> -->
+                        <img src="/images/scaleable.png" alt="Scalable Solutions" class="m-auto h-7 w-7 text-gray-700 dark:text-white" />
+                    </Feature>
+                </div>
+            </div>
+        </div>
+    </Container>
+</div>
+
+<style>
+.animate-rise {
+    animation: riseAndFadeIn 1.5s ease-in-out forwards;
+}
+
+@keyframes riseAndFadeIn {
+    from {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+</style>
+

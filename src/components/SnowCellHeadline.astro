@@ -1,0 +1,68 @@
+---
+// No imports needed unless you have a specific container or layout component
+---
+
+<div class="stats-section py-12 text-center">
+    <div class="stat-item">
+      <span class="stat-number text-4xl font-bold">35x</span>
+      <span class="stat-label">FASTER</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number text-4xl font-bold">80%</span>
+      <span class="stat-label">LESS EXPENSIVE</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number text-4xl font-bold">50%</span>
+      <span class="stat-label">REDUCTION IN LATENCY</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number text-4xl font-bold">14</span>
+      <span class="stat-label">TIER 4 DATA CENTERS IN EUROPE</span>
+    </div>
+  </div>
+  
+  <style>
+    /* Base styles for stats section */
+    .stats-section {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      /* Set the default background and text color for light mode */
+      background-color: var(--color-bg);
+      color: var(--color-text);
+    }
+    /* Styles for dark mode */
+    @media (prefers-color-scheme: dark) {
+      .stats-section {
+        /* Set the background and text color for dark mode */
+        background-color: var(--color-bg-dark);
+        color: var(--color-text-dark);
+      }
+    }
+    /* Stat item styles */
+    .stat-item {
+      margin: 1rem;
+    }
+    .stat-number {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    .stat-label {
+      display: block;
+      font-size: 1.25rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+  </style>
+  
+  <script>
+    // Define your color variables based on the Tailwind config
+    const style = document.documentElement.style;
+    style.setProperty('--color-bg', '#f3f4f6'); // light background color
+    style.setProperty('--color-text', '#1f2937'); // light text color
+    style.setProperty('--color-bg-dark', '#111827'); // dark background color
+    style.setProperty('--color-text-dark', '#9ca3af'); // dark text color
+  </script>
+  

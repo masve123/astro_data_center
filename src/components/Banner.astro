@@ -1,0 +1,48 @@
+---
+// Import the React component
+import BannerCarousel from '../components/react/BannerCarousel.jsx';
+// Define your banners data
+const banners = [
+  { title: 'Banner 1', description: 'Description for Banner 1' },
+   {title: 'Banner 2', description: 'Description for Banner 2' },
+    {title: 'Banner 3', description: 'Description for Banner 3' },
+];
+---
+
+<!-- Use the React component in your Astro file -->
+<BannerCarousel banners={banners} client:load/>
+
+
+
+
+<style>
+.banner-carousel {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  .banner {
+    display: inline-block;
+    margin-right: 24px; /* space between banners */
+    animation: scrollBanner 10s linear infinite;
+  }
+  
+  @keyframes scrollBanner {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  /* Responsive adjustments if necessary */
+  @media (max-width: 768px) {
+    .banner {
+      /* Adjust banner size for smaller screens */
+    }
+  }
+
+</style>
+  

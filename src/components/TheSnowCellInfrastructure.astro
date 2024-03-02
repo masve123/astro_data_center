@@ -1,0 +1,46 @@
+---
+import Container from "./Container.astro";
+---
+
+<!-- TheArcticInfrastructure.astro -->
+<div class="the-arctic-infrastructure bg-gray-50 dark:bg-gray-800 py-20" id="the-arctic-infrastructure">
+  <Container>
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-gray-900 dark:text-white">Our Infrastructure at-a-Glance</h2>
+    </div>
+    <div class="flex flex-wrap justify-center gap-10">
+      <!-- Feature 1 -->
+      <div class="flex flex-col items-center">
+        <img src="/images/cloud-data.png" alt="Data centers" class="mb-4 h-12 w-12" />
+        <span class="text-sm font-medium text-gray-600 dark:text-gray-300 text-center">Data centers across Europe</span>
+      </div>
+      <div class="flex flex-col items-center">
+        <img src="/images/edge.png" alt="Data centers" class="mb-4 h-12 w-12" />
+        <span class="text-sm font-medium text-gray-600 dark:text-gray-300 text-center">Bare metal</span>
+    </div>
+    <div class="flex flex-col items-center">
+        <img src="/images/sharing.png" alt="Data centers" class="mb-4 h-12 w-12" />
+        <span class="text-sm font-medium text-gray-600 dark:text-gray-300 text-center">Fully distributed</span>
+    </div>
+    <div class="flex flex-col items-center">
+        <img src="/images/cloud-storage.png" alt="Data centers" class="mb-4 h-12 w-12" />
+        <span class="text-sm font-medium text-gray-600 dark:text-gray-300 text-center">Performant storage</span>
+    </div>
+    <div class="flex flex-col items-center">
+        <img src="/images/cloud-network.png" alt="Data centers" class="mb-4 h-12 w-12" />
+        <span class="text-sm font-medium text-gray-600 dark:text-gray-300 text-center">Premium networking</span>
+    </div>
+    <div class="flex flex-col items-center">
+        <img src="/images/graphics-card.png" alt="Data centers" class="mb-4 h-12 w-12" />
+        <span class="text-sm font-medium text-gray-600 dark:text-gray-300 text-center">Complete set of GPUs</span>
+    </div>
+  </Container>
+</div>
+
+<style>
+  /* Additional styles for hover effects, etc. */
+  .the-arctic-infrastructure div:hover {
+    /* Example hover effect for the feature */
+    /*scale: 1.05; */
+  }
+</style>

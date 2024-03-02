@@ -1,0 +1,132 @@
+---
+import { Astronav, MenuItems, MenuIcon, Dropdown, DropdownItems } from "astro-navbar";
+import Container from "./Container.astro";
+import HeroButton from "./HeroButton.astro";
+import DropdownMenu1 from "../components/react/DropdownMenu1";
+import Navbar from "../components/react/Navbar.tsx";
+---
+
+<header class="bg-white dark:bg-darker fixed top-0 left-0 w-full z-50"> <!-- Change from absolute to fixed for sticky navbar -->
+  <Container>
+    <Astronav>
+      <!-- Adjust padding here to match the vertical spacing you want -->
+      <div class="flex justify-between items-center w-full py-1 lg:py-4">
+        <!-- Logo and company name on the left -->
+        <div class="flex items-center space-x-4 lg:space-x-6">
+          <!-- Replace with your actual logo component or img tag -->
+          <div aria-hidden="true" class="flex space-x-1">
+            <div class="h-4 w-4 rounded-full bg-gray-900 dark:bg-white"></div>
+            <div class="h-6 w-2 bg-primary"></div>
+          </div>
+          <a href="/" class="text-2xl font-bold text-gray-900 dark:text-white">SnowCell</a>
+
+        </div>
+        <!-- Navigation items -->
+        <nav class="hidden lg:flex items-center gap-4 lg:gap-6">
+          <!-- Adjust gap here to match the spacing you want between nav items -->
+
+          <!-- Products Item -->
+          <li class="list-none">
+            <Dropdown class="group">
+              <button class="flex items-center text-gray-900 dark:text-white hover:text-primary">
+                <span>Products</span>
+                <!-- Replace with your dropdown arrow SVG -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 ml-1 group-open:rotate-180">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
+                </svg>
+              </button>
+              <DropdownItems class="absolute bg-white dark:bg-[#09112c] rounded-lg">
+                <ul class="w-40 rounded-md shadow-lg">
+                  <li class="px-4 py-2 dark:hover:bg-darker"><a href="/gpu-compute" class="text-gray-900 dark:text-white hover:text-primary">GPU Compute</a></li>
+                  <li class="px-4 py-2 dark:hover:bg-darker"><a href="/menu2" class="text-gray-900 dark:text-white hover:text-primary">Kubernetes</a></li>
+                  <li class="px-4 py-2 dark:hover:bg-darker"><a href="/menu3" class="text-gray-900 dark:text-white hover:text-primary">Virtual Servers</a></li>
+                  <li class="px-4 py-2 dark:hover:bg-darker"><a href="/menu3" class="text-gray-900 dark:text-white hover:text-primary">Storage</a></li>
+                </ul>
+              </DropdownItems>
+            </Dropdown>
+          </li>
+          <!-- Products Item -->
+
+          <!-- Solutions Item -->
+          <li class="list-none">
+            <Dropdown class="group">
+              <button class="flex items-center text-gray-900 dark:text-white hover:text-primary">
+                <span>Solutions</span>
+                <!-- Replace with your dropdown arrow SVG -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 ml-1 group-open:rotate-180">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
+                </svg>
+              </button>
+              <DropdownItems class="absolute bg-white dark:bg-[#09112c] rounded-lg">
+                <ul class="w-40 rounded-md shadow-lg">
+                  <li class="px-4 py-2 dark:hover:bg-darker"><a href="/gpu-compute" class="text-gray-900 dark:text-white hover:text-primary">Machine Learning</a></li>
+                  <li class="px-4 py-2 dark:hover:bg-darker"><a href="/gpu-compute" class="text-gray-900 dark:text-white hover:text-primary">AI Inference</a></li>
+                  <li class="px-4 py-2 dark:hover:bg-darker"><a href="/gpu-compute" class="text-gray-900 dark:text-white hover:text-primary">VFX & Rendering</a></li>
+                  <li class="px-4 py-2 dark:hover:bg-darker"><a href="/menu2" class="text-gray-900 dark:text-white hover:text-primary">API-Access</a></li>
+                  <li class="px-4 py-2 dark:hover:bg-darker"><a href="/menu2" class="text-gray-900 dark:text-white hover:text-primary">Serverless</a></li>
+                  <li class="px-4 py-2 dark:hover:bg-darker"><a href="/menu3" class="text-gray-900 dark:text-white hover:text-primary">Data Centers</a></li>
+                </ul>
+              </DropdownItems>
+            </Dropdown>
+          </li>
+          <!-- Solutions Item -->
+
+          <!-- Items without dropdown -->
+          <a href="/whysnowcell" class="text-gray-900 dark:text-white hover:text-primary">Why SnowCell</a>
+            <a href="/#pricing" class="text-gray-900 dark:text-white hover:text-primary">Pricing</a>
+
+             <!-- Company Item -->
+          <li class="list-none">
+            <Dropdown class="group">
+              <button class="flex items-center text-gray-900 dark:text-white hover:text-primary">
+                <span>Company</span>
+                <!-- Replace with your dropdown arrow SVG -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 ml-1 group-open:rotate-180">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
+                </svg>
+              </button>
+              <DropdownItems class="absolute bg-white dark:bg-[#09112c] rounded-lg">
+                <ul class="w-40 rounded-md shadow-lg">
+                  <li class="px-4 py-2 dark:hover:bg-darker"><a href="/gpu-compute" class="text-gray-900 dark:text-white hover:text-primary">About Us</a></li>
+                  <li class="px-4 py-2 dark:hover:bg-darker">
+                    <a href="https://snowcell.gitbook.io/docs-snowcell/" class="text-gray-900 dark:text-white hover:text-primary" target="_blank" rel="noopener noreferrer">Documentation</a>
+                  </li>                  
+                  <li class="px-4 py-2 dark:hover:bg-darker"><a href="/menu3" class="text-gray-900 dark:text-white hover:text-primary">Blog</a></li>
+                  <li class="px-4 py-2 dark:hover:bg-darker"><a href="/menu3" class="text-gray-900 dark:text-white hover:text-primary">Investor Relations</a></li>
+                </ul>
+              </DropdownItems>
+            </Dropdown>
+          </li>
+          <!-- Company Item -->
+
+          <!-- Contact Us Item -->
+            <a href="/#contact-us" class="text-gray-900 dark:text-white hover:text-primary">Contact Us</a>
+          <!-- Contact Us Item -->
+
+          <!-- Login Item -->
+            <HeroButton variant={"primary"} className={"min-w-max text-white"}>
+              <span class="hidden sm:flex relative z-[5]">
+                  Login
+              </span>
+              <span class="flex sm:hidden relative z-[5]">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
+                  </svg>                                      
+              </span>
+          </HeroButton>
+          <!-- ... other nav items ... -->
+          <!-- Dropdown and MenuIcon for mobile, if applicable -->
+        </nav>
+      </div>
+    </Astronav>
+  </Container>
+</header>
+
+
+<style>
+/* This is for the background of the dropdown menus */
+.bg-custom-dropdown {
+  background-color: #727ea7; /* Your chosen lighter color */
+}
+
+</style>

@@ -1,0 +1,41 @@
+---
+import BannerCarousel from './react/BannerCarousel';
+import Container from './Container.astro';
+
+const features = [
+  {
+    image: '/images/cloud-data.png',
+    alt: 'Data centers',
+    title: 'Data centers across Europe',
+    description: 'Locations throughout Europe for optimal performance.',
+  },
+  {
+    image: '/images/edge.png',
+    alt: 'Low latency',
+    title: 'Low latency',
+    description: 'High-speed connections for low latency and fast response times.',
+  },
+  {
+    image: '/images/sharing.png',
+    alt: 'Secure connection',
+    title: 'Secure connection',
+    description: 'Secure and reliable connections to ensure data integrity.',
+  },
+];
+---
+
+<div class="the-arctic-infrastructure bg-gray-50 dark:bg-gray-800 py-20" id="the-arctic-infrastructure">
+  <Container>
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-gray-900 dark:text-white">Our Infrastructure at-a-Glance</h2>
+    </div>
+
+    <!-- Correctly render the BannerCarousel component with the new props -->
+    <BannerCarousel client:load banners={features} />
+
+  </Container>
+</div>
+
+<style>
+  /* Your existing styles */
+</style>

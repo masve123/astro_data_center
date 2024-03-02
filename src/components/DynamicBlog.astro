@@ -1,0 +1,53 @@
+---
+import Container from "./Container.astro";
+
+// Ensure the glob pattern is correct relative to this file
+//const posts = await Astro.glob('../posts/**/*.md');
+import Astro from "@astrojs/runtime";
+const postPromises = await Astro.glob('../posts/**/*.md');
+
+const posts = await Promise.all(postPromises.map(async (post) => {
+  // Call the function to get the compiled HTML content
+  const contentHtml = await post.compiledContent();
+  return {
+    ...post,
+    contentHtml, // Add the compiled content to the post object
+  };
+}));
+---
+
+<Container>
+  <div class="py-16 text-center">
+    <h1 class="text-5xl font-black dark:text-white md:text-6xl">The SnowCell Blog</h1>
+    <p class="mt-4 text-lg text-gray-700 dark:text-gray-100">Latest insights and stories from our team.</p>
+  </div>
+  <!-- ... -->
+  <div class="blog-posts space-y-12">
+    {posts.map((post) => (
+      <article class="p-8 rounded-lg shadow-lg bg-white dark:bg-gray-800">
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white">{post.frontmatter.title}</h2>
+        <p class="mt-2 text-gray-600 dark:text-gray-300">Published on {post.frontmatter.date} by {post.frontmatter.author}</p>
+        {/* Link to the individual blog post page using the slug */}
+        <a href={`/${post.frontmatter.slug}`} class="text-blue-600 hover:text-blue-800">Read more</a>
+      </article>
+    ))}
+  </div>
+</Container>
+
+
+<!-- <Container>
+  <div class="py-16 text-center">
+      <h1 class="text-5xl font-black dark:text-white md:text-6xl">The Arctic Blog</h1>
+      <p class="mt-4 text-lg text-gray-700 dark:text-gray-100">Latest insights and stories from our team.</p>
+  </div>
+  <div class="blog-posts space-y-12">
+    {posts.map((post) => (
+      <article class="p-8 rounded-lg shadow-lg bg-white dark:bg-gray-800">
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white">{post.frontmatter.title}</h2>
+        <p class="mt-2 text-gray-600 dark:text-gray-300">Published on {post.frontmatter.date} by {post.frontmatter.author}</p>
+        {/* Use the contentHtml variable to set the inner HTML */}
+        <div class="prose dark:prose-dark markdown-content text-gray-900 dark:text-gray-100" set:html={post.contentHtml}></div>
+      </article>
+    ))}
+  </div>
+</Container> -->

@@ -1,0 +1,88 @@
+---
+// Import Layout
+import Container from '../components/Container.astro';
+import Layout from '../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+    const allPosts = await Astro.glob('../posts/**/*.md');
+    return allPosts.map((post) => {
+        const slug = post.file.split('/').pop().replace('.md', '');
+        return {
+            params: {
+                slug,
+            },
+        };
+    });
+}
+
+// Fetch the slug from the URL
+const slug = Astro.params.slug;
+
+// Fetch all blog posts
+const posts = await Astro.glob('../posts/**/*.md');
+
+// Find the post that matches the slug
+const post = posts.find(p => p.file.endsWith(`${slug}.md`));
+
+// If no post is found, return a 404 response
+if (!post) {
+    return new Response('Post not found', {
+        status: 404
+    });
+}
+
+// Get the content of the post
+const content = await post.compiledContent();
+
+// Get the word count and calculate the estimated reading time
+const wordCount = content.split(/\s+/).length;
+const readingTime = Math.ceil(wordCount / 200); // Roughly 200 words per minute
+
+---
+
+
+<!-- <Layout>
+  <article>
+      <h1>{post.frontmatter.title}</h1>
+      <div set:html={content} />
+  </article>
+</Layout> -->
+
+<!-- <Layout>
+    <Container>
+      <article class="py-16 text-center">
+        <h1 class="text-5xl font-black dark:text-white md:text-6xl">{post.frontmatter.title}</h1>
+        <p class="mt-4 text-lg text-gray-700 dark:text-gray-100">Published on {post.frontmatter.date} by {post.frontmatter.author}</p>
+        <div class="prose dark:prose-dark markdown-content text-gray-900 dark:text-gray-100" set:html={content}></div>
+      </article>
+    </Container>
+  </Layout> -->
+
+
+
+
+<!-- 
+  <Layout>
+    <Container>
+      <article class="max-w-prose mx-auto py-16">
+        <h1 class="text-5xl font-black dark:text-white md:text-6xl">{post.frontmatter.title}</h1>
+        <p class="mt-4 text-lg text-gray-700 dark:text-gray-100">Published on {post.frontmatter.date} by {post.frontmatter.author} · {readingTime} min read</p>
+        <div class="prose dark:prose-dark markdown-content text-gray-900 dark:text-gray-100" set:html={content}></div>
+      </article>
+    </Container>
+  </Layout> -->
+
+
+  <Layout>
+    <Container>
+      <article class="max-w-prose mx-auto py-16">
+        <h1 class="text-5xl font-black dark:text-white md:text-6xl mb-6">{post.frontmatter.title}</h1>
+        <div class="mb-8">
+          <p class="text-lg text-gray-700 dark:text-gray-300">Published on {post.frontmatter.date} by {post.frontmatter.author}</p>
+          <p class="text-sm text-gray-500 dark:text-gray-400">{readingTime} min read</p>
+        </div>
+        <div class="prose dark:prose-dark markdown-content text-gray-900 dark:text-gray-100" set:html={content}></div>
+      </article>
+    </Container>
+  </Layout>
+  

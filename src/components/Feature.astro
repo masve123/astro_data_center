@@ -1,0 +1,77 @@
+---
+// const { title, description } = Astro.props;
+// const { buttonLink, buttonText = "Learn More" } = Astro.props;
+import Button from './Button.astro';
+const { title, description, buttonLink, buttonText = "Learn More", buttonEmphasis = "primary" } = Astro.props;
+---
+
+<!-- Conditional rendering based on whether buttonLink is provided -->
+{buttonLink ? (
+  <!-- If buttonLink is provided, wrap the content with an <a> tag -->
+  <a href={buttonLink} class="block no-underline hover:no-underline text-current" aria-label={`Learn more about ${title}`}>
+    <div class="flex flex-col gap-6 rounded-2xl p-8 transition duration-300 hover:bg-white hover:shadow-2xl hover:shadow-gray-600/10 dark:hover:bg-gray-700/60 dark:hover:shadow-none">
+        <!-- Slot for image or icon -->
+        <div class="flex h-10 w-10 items-center justify-center rounded border border-gray-200 dark:border-gray-700">
+            <slot />
+        </div>
+        <!-- Title -->
+        <div class="flex-1">
+            <h2 class="text-xl font-semibold text-gray-900 dark:text-white">
+                {title}
+            </h2>
+            <!-- Description -->
+            <p class="mt-3 text-gray-600 dark:text-gray-400">
+                {description}
+            </p>
+        </div>
+        <!-- Button is optional based on design -->
+        <!-- Button component is commented out since the whole area is clickable -->
+        <!-- <Button El="a" label={buttonText} type="button" emphasis={buttonEmphasis} to={buttonLink} /> -->
+    </div>
+  </a>
+) : (
+  <!-- If no buttonLink is provided, just use a div -->
+  <div class="flex flex-col gap-6 rounded-2xl p-8 transition duration-300 hover:bg-white hover:shadow-2xl hover:shadow-gray-600/10 dark:hover:bg-gray-700/60 dark:hover:shadow-none">
+      <!-- Slot for image or icon -->
+      <div class="flex h-10 w-10 items-center justify-center rounded border border-gray-200 dark:border-gray-700">
+          <slot />
+      </div>
+      <!-- Title -->
+      <div class="flex-1">
+          <h2 class="text-xl font-semibold text-gray-900 dark:text-white">
+              {title}
+          </h2>
+          <!-- Description -->
+          <p class="mt-3 text-gray-600 dark:text-gray-400">
+              {description}
+          </p>
+      </div>
+      <!-- Button is optional and can be included here if needed -->
+  </div>
+)}
+
+<!-- Original code with button to the Feature -->
+
+<!-- Note that the button is optional -->
+<!-- <div class="flex flex-col gap-6 rounded-2xl p-8 transition duration-300 hover:bg-white hover:shadow-2xl hover:shadow-gray-600/10 dark:hover:bg-gray-700/60 dark:hover:shadow-none">
+    <div class="flex h-10 w-10 rounded border border-gray-200 dark:border-gray-700">
+        <slot />
+    </div>
+    <div class="flex-1">
+        <h2 class="text-xl font-semibold text-gray-900 dark:text-white">
+            {title}
+        </h2>
+        <p class="mt-3 text-gray-600 dark:text-gray-400">
+            {description}
+        </p>
+    </div> -->
+    <!-- Conditionally render the button if buttonLink is provided. Choose one of the buttons-->
+    <!-- {buttonLink && (
+        <a href={buttonLink} class="mt-4 inline-flex items-center justify-center px-6 py-2 text-sm font-medium leading-6 text-center text-white transition bg-blue-600 rounded shadow hover:bg-blue-500 focus:shadow-outline active:bg-blue-700" target="_blank" rel="noopener noreferrer">
+            {buttonText}
+        </a>
+    )} -->
+    <!-- {buttonLink && (
+        <Button El="a" label={buttonText} type="button" emphasis={buttonEmphasis} to={buttonLink} />
+    )}
+</div> -->
