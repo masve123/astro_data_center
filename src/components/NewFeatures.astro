@@ -1,0 +1,35 @@
+---
+import Container from "./Container.astro";
+import FeatureOutline from "./FeatureOutline.astro";
+---
+<Container>
+    <div class="relative grid overflow-hidden rounded-[1.25rem] bg-transparent p-1 sm:grid-cols-2">
+    <FeatureOutline title="Advanced Security" 
+            description=" Deploying multi-layered security measures to ensure data integrity and protection against unauthorized access and threats. Your data's safety is our utmost priority."  
+            buttonLink="/whysnowcell" 
+            buttonText="Learn More">
+        <img src="/images/data-security.png" alt="Advanced Security" class="m-auto h-7 w-7 text-gray-700 dark:text-white" />
+    </FeatureOutline>
+
+    <FeatureOutline title="Pay-as-you-go" 
+            description="Benefit from our serverless solutions with transparent and flexible billing. Only pay for the compute power you utilize, ensuring efficient scaling of resources without the fear of overpaying."
+            buttonLink="/whysnowcell" 
+            buttonText="Learn More">
+        <img src="/images/pay.png" alt="Pay-as-you-go" class="m-auto h-7 w-7 text-gray-700 dark:text-white" />
+    </FeatureOutline>
+
+    <FeatureOutline title="Ultra-Fast Performance" 
+            description="Leveraging the latest in HPC technology to provide blazing-fast computational speeds. Ensure rapid data processing and reduced time-to-insight."
+            buttonLink="/whysnowcell" 
+            buttonText="Learn More">
+        <img src="/images/work-speed.png" alt="Ultra-Fast Performance" class="m-auto h-7 w-7 text-gray-700 dark:text-white" />
+    </FeatureOutline>
+
+    <FeatureOutline title="Scalable Solutions" 
+            description="Our modular and scalable solutions adapt to your growing computational needs. Expand seamlessly without compromising on performance."
+            buttonLink="/whysnowcell" 
+            buttonText="Learn More">
+        <img src="/images/scaleable.png" alt="Scalable Solutions" class="m-auto h-7 w-7 text-gray-700 dark:text-white" />
+    </FeatureOutline>
+</div>
+</Container>
