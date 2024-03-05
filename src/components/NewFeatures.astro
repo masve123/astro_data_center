@@ -2,34 +2,44 @@
 import Container from "./Container.astro";
 import FeatureOutline from "./FeatureOutline.astro";
 ---
+
 <Container>
-    <div class="relative grid overflow-hidden rounded-[1.25rem] bg-transparent p-1 sm:grid-cols-2">
-    <FeatureOutline title="Advanced Security" 
-            description=" Deploying multi-layered security measures to ensure data integrity and protection against unauthorized access and threats. Your data's safety is our utmost priority."  
-            buttonLink="/whysnowcell" 
-            buttonText="Learn More">
-        <img src="/images/data-security.png" alt="Advanced Security" class="m-auto h-7 w-7 text-gray-700 dark:text-white" />
-    </FeatureOutline>
+    <div class="flex flex-col md:flex-row items-center justify-center gap-8">
+        <!-- Text Block on the Left -->
+        <div class="md:w-1/3 p-4">
+            <!-- Your text content here -->
+            <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">
+                Why Choose Us?
+            </h2>
+            <p class="text-gray-600 dark:text-gray-300">
+                Explore the benefits of our platform and understand how our features can streamline your workflow.
+            </p>
+            <button class="mt-4 rounded-full bg-blue-600 text-white py-2 px-6 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50">
+                Find out more
+            </button>
+        </div>
 
-    <FeatureOutline title="Pay-as-you-go" 
-            description="Benefit from our serverless solutions with transparent and flexible billing. Only pay for the compute power you utilize, ensuring efficient scaling of resources without the fear of overpaying."
-            buttonLink="/whysnowcell" 
-            buttonText="Learn More">
-        <img src="/images/pay.png" alt="Pay-as-you-go" class="m-auto h-7 w-7 text-gray-700 dark:text-white" />
-    </FeatureOutline>
+        <!-- Feature Cards Lined Up Horizontally -->
+        <div class="flex flex-wrap md:flex-nowrap gap-4 justify-center">
+          
 
-    <FeatureOutline title="Ultra-Fast Performance" 
-            description="Leveraging the latest in HPC technology to provide blazing-fast computational speeds. Ensure rapid data processing and reduced time-to-insight."
-            buttonLink="/whysnowcell" 
-            buttonText="Learn More">
-        <img src="/images/work-speed.png" alt="Ultra-Fast Performance" class="m-auto h-7 w-7 text-gray-700 dark:text-white" />
-    </FeatureOutline>
+            <FeatureOutline title="One-Click Docs" 
+                description="Publish your documentation with a single click and customize to match your brand."
+                buttonLink="/whysnowcell" 
+                buttonText="Learn More"
+                class="w-40 h-40 md:w-48 md:h-48">
+                <!-- Icon or Image -->
+                <img src="/images/pay.png" alt="One-Click Docs" />
+            </FeatureOutline>
 
-    <FeatureOutline title="Scalable Solutions" 
-            description="Our modular and scalable solutions adapt to your growing computational needs. Expand seamlessly without compromising on performance."
-            buttonLink="/whysnowcell" 
-            buttonText="Learn More">
-        <img src="/images/scaleable.png" alt="Scalable Solutions" class="m-auto h-7 w-7 text-gray-700 dark:text-white" />
-    </FeatureOutline>
-</div>
+            <FeatureOutline title="Visitor Authentication" 
+                description="Secure your documents with custom access and visitor authentication."
+                buttonLink="/whysnowcell" 
+                buttonText="Learn More"
+                class="w-40 h-40 md:w-48 md:h-48">
+                <!-- Icon or Image -->
+                <img src="/images/work-speed.png" alt="Visitor Authentication" />
+            </FeatureOutline>
+        </div>
+    </div>
 </Container>
