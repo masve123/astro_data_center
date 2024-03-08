@@ -21,6 +21,14 @@ import Navbar from "../components/react/Navbar.tsx";
           <a href="/" class="text-2xl font-bold text-gray-900 dark:text-white">SnowCell</a>
 
         </div>
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-nav-toggle" class="lg:hidden p-2">
+          <!-- Hamburger Icon SVG -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+        </button>
+
         <!-- Navigation items -->
         <nav class="hidden lg:flex items-center gap-4 lg:gap-6">
           <!-- Adjust gap here to match the spacing you want between nav items -->
@@ -38,8 +46,7 @@ import Navbar from "../components/react/Navbar.tsx";
               <DropdownItems class="absolute bg-white dark:bg-[#09112c] rounded-lg">
                 <ul class="w-40 rounded-md shadow-lg">
                   <li class="px-4 py-2 dark:hover:bg-darker"><a href="/gpu-compute" class="text-gray-900 dark:text-white hover:text-primary">GPU Compute</a></li>
-                  <li class="px-4 py-2 dark:hover:bg-darker"><a href="/menu2" class="text-gray-900 dark:text-white hover:text-primary">Kubernetes</a></li>
-                  <li class="px-4 py-2 dark:hover:bg-darker"><a href="/menu3" class="text-gray-900 dark:text-white hover:text-primary">Virtual Servers</a></li>
+                  <li class="px-4 py-2 dark:hover:bg-darker"><a href="/menu2" class="text-gray-900 dark:text-white hover:text-primary">Virtual Servers</a></li>
                   <li class="px-4 py-2 dark:hover:bg-darker"><a href="/menu3" class="text-gray-900 dark:text-white hover:text-primary">Storage</a></li>
                 </ul>
               </DropdownItems>
@@ -62,7 +69,6 @@ import Navbar from "../components/react/Navbar.tsx";
                   <li class="px-4 py-2 dark:hover:bg-darker"><a href="/gpu-compute" class="text-gray-900 dark:text-white hover:text-primary">Machine Learning</a></li>
                   <li class="px-4 py-2 dark:hover:bg-darker"><a href="/gpu-compute" class="text-gray-900 dark:text-white hover:text-primary">AI Inference</a></li>
                   <li class="px-4 py-2 dark:hover:bg-darker"><a href="/gpu-compute" class="text-gray-900 dark:text-white hover:text-primary">VFX & Rendering</a></li>
-                  <li class="px-4 py-2 dark:hover:bg-darker"><a href="/menu2" class="text-gray-900 dark:text-white hover:text-primary">API-Access</a></li>
                   <li class="px-4 py-2 dark:hover:bg-darker"><a href="/menu2" class="text-gray-900 dark:text-white hover:text-primary">Serverless</a></li>
                   <li class="px-4 py-2 dark:hover:bg-darker"><a href="/menu3" class="text-gray-900 dark:text-white hover:text-primary">Data Centers</a></li>
                 </ul>
@@ -130,3 +136,17 @@ import Navbar from "../components/react/Navbar.tsx";
 }
 
 </style>
+
+<script>
+  // This is the JavaScript to toggle the mobile nav */
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggle = document.getElementById('mobile-nav-toggle');
+    const nav = document.querySelector('nav');
+
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('hidden'); // This toggles the visibility
+    });
+  });
+</script>
+
+
