@@ -4,9 +4,9 @@ import FeatureOutline from "./FeatureOutline.astro";
 ---
 
 <Container>
-    <div class="flex flex-col md:flex-row items-center justify-center gap-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full items-start">
         <!-- Text Block on the Left -->
-        <div class="md:w-1/3 p-4">
+        <div class="lg:col-span-1 p-4">
             <!-- Your text content here -->
             <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">
                 Why Choose Us?
@@ -18,28 +18,24 @@ import FeatureOutline from "./FeatureOutline.astro";
                 Find out more
             </button>
         </div>
-
-        <!-- Feature Cards Lined Up Horizontally -->
-        <div class="flex flex-wrap md:flex-nowrap gap-4 justify-center">
-          
-
+        
+        <!-- Feature Cards on the Right -->
+        <div class="lg:col-span-1 grid grid-cols-2 gap-4">
+            <!-- Features will be defined in FeatureOutline.astro -->
             <FeatureOutline title="One-Click Docs" 
                 description="Publish your documentation with a single click and customize to match your brand."
                 buttonLink="/whysnowcell" 
-                buttonText="Learn More"
-                class="w-40 h-40 md:w-48 md:h-48">
-                <!-- Icon or Image -->
-                <img src="/images/pay.png" alt="One-Click Docs" />
+                buttonText="Learn More">
+                <img src="/images/pay.png" alt="One-Click Docs" class="w-full" />
             </FeatureOutline>
 
             <FeatureOutline title="Visitor Authentication" 
                 description="Secure your documents with custom access and visitor authentication."
                 buttonLink="/whysnowcell" 
-                buttonText="Learn More"
-                class="w-40 h-40 md:w-48 md:h-48">
-                <!-- Icon or Image -->
-                <img src="/images/work-speed.png" alt="Visitor Authentication" />
+                buttonText="Learn More">
+                <img src="/images/work-speed.png" alt="Visitor Authentication" class="w-full" />
             </FeatureOutline>
         </div>
     </div>
 </Container>
+
