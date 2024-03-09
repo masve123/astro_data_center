@@ -21,9 +21,15 @@ import Container from "./Container.astro";
             Our infrastructure is optimized for compute-intensive tasks, offering significant advantages in speed and cost-effectiveness.
         </p>
         <!-- Learn More button centered -->
-        <div class="mt-12">
-            <Button El="a" emphasis="primary" label="Learn More" to="#details" />
-        </div>
+        <div class="mt-10 flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+            <!-- For light mode -->
+            <a href="#get-started" class="bg-white border border-gray-300 rounded-md px-8 py-4 text-lg text-gray-800 font-medium hover:bg-gray-50 hover:shadow-md transition-all dark:bg-gray-100 dark:border-gray-100 dark:text-black dark:hover:bg-gray-200">
+              Get started for free &rarr;
+            </a>
+            <a href="#plans-pricing" class="bg-primary border-2 border-primary rounded-md px-8 py-4 text-lg text-white font-medium hover:bg-opacity-90 hover:border-gray-300 transition-all dark:bg-dark dark:border-gray-700 dark:hover:border-gray-300">
+              Plans and pricing &rarr;
+            </a>
+          </div>
     </div>
     </Container>
     
