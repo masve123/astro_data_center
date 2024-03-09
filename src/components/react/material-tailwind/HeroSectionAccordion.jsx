@@ -3,6 +3,9 @@ import React, { useState, useEffect } from 'react';
  
 export default function HeroSectionAccordion() {
   const [module, setModule] = useState(null);
+  const [alwaysOpen, setAlwaysOpen] = useState(true);
+
+
   useEffect(() => {
     (async () => {
       const materialTailwind = await import('@material-tailwind/react');
@@ -10,9 +13,13 @@ export default function HeroSectionAccordion() {
     })();
   }, []);
 
+  // // use this to open and close the accordion
+  // const [openAcc1, setOpenAcc1] = React.useState(true); 
+  // const handleOpenAcc1 = () => setOpenAcc1((cur) => !cur);
 
-  const [openAcc1, setOpenAcc1] = React.useState(true); 
-  const handleOpenAcc1 = () => setOpenAcc1((cur) => !cur);
+  // Currently in use: always open
+  // const [alwaysOpen, setAlwaysOpen] = useState(true);
+  const handleAlwaysOpen = () => setAlwaysOpen((cur) => !cur);
 
 
   if (!module) {
@@ -23,13 +30,9 @@ export default function HeroSectionAccordion() {
  
   return (
     <>
-      <Accordion open={openAcc1} className="dark:text-white">
-        <AccordionHeader onClick={handleOpenAcc1}>Why SnowCell?</AccordionHeader>
+      <Accordion open={alwaysOpen} className="dark:text-white">
+        <AccordionHeader onClick={handleAlwaysOpen}>Why SnowCell?</AccordionHeader>
         <AccordionBody className="dark:text-gray-100">
-          {/* We&apos;re not always in the position that we want to be at. We&apos;re constantly
-          growing. We&apos;re constantly making mistakes. We&apos;re constantly trying to express
-          ourselves and actualize our dreams. */}
-
           We are faster, cheaper, and more efficient than traditional legacy providers. 
           Gone are the days of complex setups, slow deployments, and escalating costs. 
         </AccordionBody>

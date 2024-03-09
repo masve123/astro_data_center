@@ -5,7 +5,7 @@ import Container from "./Container.astro";
 const posts = await Astro.glob('../posts/**/*.md');
 
 ---
-
+<section>
 <div id="blog">
     <Container>
         <div class="mb-12 space-y-2 text-center">
@@ -32,8 +32,7 @@ const posts = await Astro.glob('../posts/**/*.md');
         </div>
     </Container>
 </div>
-
-    
+</section>
     
 
      <!-- <div id="blog">

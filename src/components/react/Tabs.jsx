@@ -1,5 +1,5 @@
 
-// import not working as of 27/02/2023
+// import not working as of 27/02/2024
 import pkg from '@material-tailwind/react';
 const {Tabs, TabsHeader, TabsBody, Tab, TabPanel} = pkg;
  
