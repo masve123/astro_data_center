@@ -50,35 +50,41 @@ import FAQAccordion from "./react/material-tailwind/FAQAccordion.jsx"
         </p>
     </div>
     <div class="divide-y divide-gray-200 border-y border-gray-200 dark:divide-gray-800 dark:border-gray-800 lg:w-7/12">
-        <Faq id="faq-1" question="Can I get a trial to test a specific machine?">
+        <Faq id="faq-1" question="How is SnowCell cheaper than legacy providers?">
             <p class="pb-6 text-base text-gray-600 dark:text-gray-400">
-                We offer free trials for potential customers looking for long-term commitments. 
-                If you are looking for reserved-cloud solutions, please send us a personal request.
+                At SnowCell, our mission is clear: we aim to deliver unmatched performance 
+                at the most competitive price point available. With the industry’s most diverse 
+                selection of GPUs, we ensure you have the ideal resources for your unique workload. 
+                Our infrastructure is engineered for both speed and adaptability, enabling peak 
+                performance and cost-effectiveness.
             </p>
             <p class="pb-6 text-base text-gray-600 dark:text-gray-400">
-                Otherwise, our spot instances are available at any time directly in our console.
+                And when it comes to support, we’re personally 
+                committed to optimizing your infrastructure for maximum efficiency. With SnowCell, 
+                you’re not just choosing a service, you’re choosing a partner dedicated to empowering 
+                your success.
             </p>
         </Faq>
-        <Faq id="faq-2" question="How long does it take to get access to the machine I purchased?">
+        <Faq id="faq-2" question="Do you offer discounts?">
             <div>
                 <p class="pb-6 text-base text-gray-600 dark:text-gray-400">
-                    For hourly rentals in the US via our instant deployment portal, access to the server 
-                    is typically granted within seconds, although it can occasionally take up to 4 minutes. 
+                    At SnowCell, you can dive into flexible on-demand cloud solutions with no strings attached. 
+                    For consistent workloads, we provide substantial savings through Reserved Instances and Bulk 
+                    Credits, tailored to your usage.
                 </p>
                 
                 <p class="pb-6 text-base text-gray-600 dark:text-gray-400">
-                    For other locations or for monthly rentals, access is usually provided within 1 hour during 
-                    our business hours of Monday to Saturday, 7am-10pm EST. In some instances, it could take up 
-                    to 24 hours, and if so, our technical team will email you promptly to keep you informed.
+                    Chat with our Sales team to unlock discounts that boost your business's efficiency and savings. 
                 </p>
             </div>
         </Faq>
-        <Faq id="faq-3" question="What happens to my data if I cancel my subscription?">
+        <Faq id="faq-3" question="Do you offer spot instances?">
             <p class="pb-6 text-base text-gray-600 dark:text-gray-400">
-                When your server rental period is over, we’ll be shutting down your VM and wiping any images you've 
-                used clean. This means all your data will be gone for good. So please, make sure you've saved everything 
-                you need somewhere else before you ask us to cancel your server. We can't keep copies, and SnowCell won't 
-                be able to help with lost data after you've told us to end the service.
+                Yes, we do. Our on-demand pricing mirrors the flexibility of interruptible instances, 
+                but with the assurance of uninterrupted service. Our clients enjoy the best of both 
+                worlds—scalable solutions with reliable access, so once you spin up an instance on 
+                SnowCell Cloud, it remains yours until you're ready to wind down, ensuring your workflows 
+                proceed without a hitch.
             </p>
         </Faq>
         <Faq id="faq-4" question="Do you process personal data and/or share it with third parties?">
@@ -88,13 +94,20 @@ import FAQAccordion from "./react/material-tailwind/FAQAccordion.jsx"
                 at <a href="mailto:support@snowcell.io" class="text-blue-500 hover:text-blue-700">support@snowcell.io</a>, and we'll take care of it.
             </p>            
         </Faq>
-        <Faq id="faq-5" question="Should I use bare metal instances or KVM Virtual Machines?">
+        <Faq id="faq-5" question="Are there any hidden costs?">
             <div class="pb-6 text-base text-gray-600 dark:text-gray-400">
-                <p>It depends on your specific use case.</p>
-                <ul class="mt-4 list-outside list-disc pl-4">
-                    <li>Choose bare metal instances for maximum performance and control, ideal for intensive, consistent workloads.</li>
-                    <li>Opt for KVM virtual machines for cost efficiency, flexibility, and easy scalability, suitable for varied and smaller workloads.</li>
-                </ul>
+                <p class="pb-6 text-base text-gray-600 dark:text-gray-400">
+                    At SnowCell, we don't believe in charging you for every GB transferred. 
+                    We've eliminated fees for regional transfers and workstation data in most scenarios. 
+                    If your bandwidth needs are extensive, we'll collaborate closely with you to understand 
+                    your requirements and secure flat rates, ensuring your large-scale cloud operations remain 
+                    cost-effective.
+                    </p>
+                    
+                    <p class="pb-6 text-base text-gray-600 dark:text-gray-400">
+                        If you are unsure about the pricing plan and/or other costs, just drop us an email 
+                    at <a href="mailto:support@snowcell.io" class="text-blue-500 hover:text-blue-700">support@snowcell.io</a>. 
+                    </p>
             </div>
         </Faq>
         <!-- <FAQAccordion client:load /> -->
