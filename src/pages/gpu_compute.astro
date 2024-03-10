@@ -1,0 +1,22 @@
+---
+import Layout from "../layouts/Layout.astro";
+import AboutHeroSection from "../components/AboutHeroSection.astro";
+
+import GPUPricing from "../components/GPUPricing.astro";
+import HowToDeploy from "../components/HowToDeploy.astro";
+import Pricing from "../components/Pricing.astro";
+import GPUHeroSection from "../components/GPUHeroSection.astro";
+import GPUStartsAtSection from "../components/GPUStartsAtSection.astro";
+
+
+---
+
+<Layout title="About us">
+    <main class="mb-40">
+        <GPUHeroSection />
+        <!-- <GPUStartsAtSection /> -->
+        <GPUPricing />
+        <HowToDeploy />
+        <Pricing />
+    </main>
+</Layout>

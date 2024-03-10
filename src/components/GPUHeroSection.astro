@@ -1,0 +1,63 @@
+---
+import Button from "./Button.astro";
+import Container from "./Container.astro";
+---
+
+<div class="hero-section relative overflow-hidden dark:bg-darker" id="gpu_hero_section">
+  
+<Container className="flex flex-col items-center justify-center text-center gap-10 lg:gap-12">
+        <div class="absolute w-full lg:w-1/2 inset-y-0 lg:right-0 ">
+            <!-- <span class="absolute -left-6 md:left-4 top-24 lg:top-28 w-24 h-24 rotate-90 skew-x-12 rounded-3xl bg-green-400 blur-xl opacity-60 lg:opacity-95 lg:block hidden"></span> -->
+            <span class="absolute right-4 bottom-12 w-24 h-24 rounded-3xl bg-primary blur-xl opacity-80"></span>
+        </div>
+        <span class="w-4/12 lg:w-2/12 aspect-square bg-gradient-to-tr from-primary to-green-400 absolute -top-5 lg:left-0 rounded-full skew-y-12 blur-2xl opacity-40 skew-x-12 rotate-90"></span>
+        
+       <!-- Content container with center alignment -->
+       <div class="relative flex flex-col items-center justify-center lg:py-7 xl:py-8 max-w-5xl mx-auto">
+        <h1 class="text-3xl tight sm:text-4xl tight md:text-5xl tight xl:text-6xl tight font-bold text-heading-1 dark:text-gray-100">
+            Access <span class="text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 from-20% via-primary via-30% to-green-600">Premium</span> GPUs at the touch of a button
+        </h1>
+        <p class="mt-8 text-lg text-gray-700 dark:text-gray-100 animate-float" style="animation-delay: 0.1s;">
+            At SnowCell, we're redefining cloud computing by merging unparalleled processing power with the flexibility of the cloud.
+        </p>
+        <!-- Learn More button centered -->
+        <div class="mt-10 flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+            <!-- For light mode -->
+            <a href="#get-started" class="bg-white border border-gray-300 rounded-md px-8 py-4 text-lg text-gray-800 font-medium hover:bg-gray-50 hover:shadow-md transition-all dark:bg-gray-100 dark:border-gray-100 dark:text-black dark:hover:bg-gray-200">
+                Learn More About Us &rarr;
+            </a>
+            <a href="/pricingpage" class="bg-primary border-2 border-primary rounded-md px-8 py-4 text-lg text-white font-medium hover:bg-opacity-90 hover:border-gray-300 transition-all dark:bg-dark dark:border-gray-700 dark:hover:border-gray-300">
+                View Our Plans &rarr;
+            </a>
+          </div>
+    </div>
+    </Container>
+</div>
+
+<style>
+    /* Animation keyframes */
+    @keyframes float {
+        0% {
+            opacity: 0;
+            transform: translate3d(0, 100%, 0);
+        }
+        100% {
+            opacity: 1;
+            transform: none;
+        }
+    }
+
+    /* Apply animation to elements */
+    .animate-float {
+        animation: float 2s ease-out forwards;
+    }
+
+    /* Base hero section styles */
+    .hero-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding: 4rem 1rem;
+    }
+</style>
