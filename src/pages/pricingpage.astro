@@ -1,0 +1,27 @@
+---
+
+import Layout from "../layouts/Layout.astro";
+import Pricing from "../components/Pricing.astro";
+import ContactUs from "../components/ContactUs.astro";
+
+import Faqs from "../components/Faqs.astro";
+
+import Blog from "../components/Blog.astro";
+
+import PricingHeroSection from "../components/PricingHeroSection.astro";
+
+
+import DescriptivePricing from "../components/DescriptivePricing.astro";
+---
+
+<Layout title="Pricing">
+    <main class="mb-40">
+        <PricingHeroSection />
+        <!-- <Reviews /> -->
+        <DescriptivePricing client:load />
+        <ContactUs />
+        <Pricing />
+        <Faqs />
+        <Blog />
+    </main>
+</Layout>
