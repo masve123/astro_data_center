@@ -9,6 +9,7 @@ import Faqs from "../components/Faqs.astro";
 import Blog from "../components/Blog.astro";
 
 import PricingHeroSection from "../components/PricingHeroSection.astro";
+import PricingFAQ from "../components/PricingFAQ.astro";
 
 
 import DescriptivePricing from "../components/DescriptivePricing.astro";
@@ -18,10 +19,9 @@ import DescriptivePricing from "../components/DescriptivePricing.astro";
     <main class="mb-40">
         <PricingHeroSection />
         <!-- <Reviews /> -->
-        <DescriptivePricing client:load />
-        <ContactUs />
-        <Pricing />
-        <Faqs />
+        <DescriptivePricing />
+        <PricingFAQ />
+        <!-- <Pricing /> -->
         <Blog />
     </main>
 </Layout>
