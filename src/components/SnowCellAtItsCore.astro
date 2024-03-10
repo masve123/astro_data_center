@@ -1,33 +1,41 @@
-
-<div class="performance-section bg-dark text-white p-10">
-    <div class="container mx-auto">
-      <h2 class="text-4xl font-bold mb-6">Faster than your laptop</h2>
-      <p class="mb-8">
-        GitHub’s own 35GB dev image starts in seconds. And with low-latency connections across multiple regions, you won’t even remember it’s not your local machine.
-      </p>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
-        <div class="stats">
-          <div class="stat">
-            <span class="stat-label">CPUs UP TO</span>
-            <span class="stat-value">32 cores</span>
-          </div>
-          <div class="stat">
-            <span class="stat-label">MEMORY UP TO</span>
-            <span class="stat-value">64 GB</span>
-          </div>
-          <div class="stat">
-            <span class="stat-label">SPIN UP IN</span>
-            <span class="stat-value">&lt;10 sec</span>
-          </div>
-        </div>
-        <div class="configurations md:col-span-2">
-          <div class="configuration border border-light-blue rounded-md p-4 mb-2">
-            <span class="config-name">2-core</span>
-            <span class="config-details">4GB RAM - 32GB storage</span>
-          </div>
-          <!-- More configuration boxes -->
-        </div>
+<div class="bg-dark text-white py-10">
+  <div class="container mx-auto px-4">
+    <h2 class="text-4xl font-bold mb-6">GPU Instances</h2>
+    <p class="mb-8">
+      SnowCell’s own 35GB dev image starts in seconds. With low-latency connections across multiple regions, you'll forget you're not on your local machine.
+    </p>
+    <div class="configurations space-y-4">
+      <!-- H100 HGX (80GB) -->
+      <div class="configuration border border-purple-500 rounded-md p-4">
+        <span class="config-name text-lg font-semibold">H100 HGX (80GB)</span>
+        <span class="config-details text-md ml-2">80GB HBM3 - $4.56/hour</span>
       </div>
+      <!-- A100 for PCIe (80GB) -->
+      <div class="configuration border border-purple-500 rounded-md p-4">
+        <span class="config-name text-lg font-semibold">A100 for PCIe (80GB)</span>
+        <span class="config-details text-md ml-2">80GB HBM2e - $2.17/hour</span>
+      </div>
+      <!-- A100 HGX (40GB) -->
+      <div class="configuration border border-purple-500 rounded-md p-4">
+        <span class="config-name text-lg font-semibold">A100 HGX (40GB)</span>
+        <span class="config-details text-md ml-2">40GB HBM2e - $2.01/hour</span>
+      </div>
+      <!-- V100 for NVLINK -->
+      <div class="configuration border border-purple-500 rounded-md p-4">
+        <span class="config-name text-lg font-semibold">V100 for NVLINK</span>
+        <span class="config-details text-md ml-2">16GB HBM2 - $0.79/hour</span>
+      </div>
+      <!-- RTX A6000 -->
+      <div class="configuration border border-purple-500 rounded-md p-4">
+        <span class="config-name text-lg font-semibold">RTX A6000</span>
+        <span class="config-details text-md ml-2">48GB GDDR6 - $1.25/hour</span>
+      </div>
+      <!-- Quadro RTX 5000 -->
+      <div class="configuration border border-purple-500 rounded-md p-4">
+        <span class="config-name text-lg font-semibold">Quadro RTX 5000</span>
+        <span class="config-details text-md ml-2">16GB GDDR6 - $0.56/hour</span>
+      </div>
+      <!-- Additional configurations can be added here following the same structure -->
     </div>
   </div>
-  
+</div>
