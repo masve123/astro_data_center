@@ -1,41 +1,43 @@
-<div class="bg-dark text-white py-10">
-  <div class="container mx-auto px-4">
-    <h2 class="text-4xl font-bold mb-6">GPU Instances</h2>
-    <p class="mb-8">
-      SnowCell’s own 35GB dev image starts in seconds. With low-latency connections across multiple regions, you'll forget you're not on your local machine.
-    </p>
-    <div class="configurations space-y-4">
-      <!-- H100 HGX (80GB) -->
-      <div class="configuration border border-purple-500 rounded-md p-4">
-        <span class="config-name text-lg font-semibold">H100 HGX (80GB)</span>
-        <span class="config-details text-md ml-2">80GB HBM3 - $4.56/hour</span>
+---
+import Container from "./Container.astro"
+---
+
+<Container>
+  <section class="about-us-section rounded-lg border border-gray-700 bg-white dark:bg-gray-900 py-16 px-6 md:px-12">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-10">
+        <h1 class="text-4xl font-bold text-gray-800 dark:text-white sm:text-5xl md:text-6xl">
+          Unveiling SnowCell's Vision
+        </h1>
+        <p class="mt-4 text-xl text-gray-500 dark:text-gray-400">
+          Driving innovation with cutting-edge GPU cloud solutions
+        </p>
       </div>
-      <!-- A100 for PCIe (80GB) -->
-      <div class="configuration border border-purple-500 rounded-md p-4">
-        <span class="config-name text-lg font-semibold">A100 for PCIe (80GB)</span>
-        <span class="config-details text-md ml-2">80GB HBM2e - $2.17/hour</span>
+
+      <div class="md:flex md:justify-between md:items-center">
+        <!-- Image Placeholder - Replace with actual image -->
+        <div class="md:w-1/2 lg:w-5/12 mb-8 md:mb-0">
+          <img src="images/storage-database.svg" alt="About SnowCell" class="mx-auto rounded-lg shadow-lg">
+        </div>
+
+        <div class="md:w-1/2 lg:w-6/12">
+          <div class="about-details text-gray-700 dark:text-gray-300 space-y-6">
+            <p>
+              Founded in 2023 by a team of passionate technologists and visionaries, SnowCell emerged from the idea that access to powerful computing resources should be straightforward and affordable. We saw the potential of GPUs to accelerate a wide range of applications—from AI and machine learning to data analytics and graphic rendering—and set out to build a cloud platform that could unlock this potential for everyone.
+            </p>
+            <p>
+              Today, SnowCell is recognized as a leader in GPU-accelerated computing. Our clients span diverse sectors, leveraging our platform for research, commercial projects, and creative endeavors. What sets us apart is our unwavering commitment to customer success, underscored by our bespoke support and tailored solutions.
+            </p>
+            <p>
+              Looking forward, SnowCell is not just expanding our technological capabilities, but also cultivating a community around innovation. We're advocates for sustainable practices in computing, and we strive to create a future where the power of GPUs can be harnessed for positive impact on a global scale.
+            </p>
+            <p class="mt-4">
+              Join us as we venture into the next frontier of cloud computing, where the possibilities are as limitless as your imagination.
+            </p>
+          </div>
+        </div>
       </div>
-      <!-- A100 HGX (40GB) -->
-      <div class="configuration border border-purple-500 rounded-md p-4">
-        <span class="config-name text-lg font-semibold">A100 HGX (40GB)</span>
-        <span class="config-details text-md ml-2">40GB HBM2e - $2.01/hour</span>
-      </div>
-      <!-- V100 for NVLINK -->
-      <div class="configuration border border-purple-500 rounded-md p-4">
-        <span class="config-name text-lg font-semibold">V100 for NVLINK</span>
-        <span class="config-details text-md ml-2">16GB HBM2 - $0.79/hour</span>
-      </div>
-      <!-- RTX A6000 -->
-      <div class="configuration border border-purple-500 rounded-md p-4">
-        <span class="config-name text-lg font-semibold">RTX A6000</span>
-        <span class="config-details text-md ml-2">48GB GDDR6 - $1.25/hour</span>
-      </div>
-      <!-- Quadro RTX 5000 -->
-      <div class="configuration border border-purple-500 rounded-md p-4">
-        <span class="config-name text-lg font-semibold">Quadro RTX 5000</span>
-        <span class="config-details text-md ml-2">16GB GDDR6 - $0.56/hour</span>
-      </div>
-      <!-- Additional configurations can be added here following the same structure -->
     </div>
-  </div>
-</div>
+  </section>
+</Container>
+
