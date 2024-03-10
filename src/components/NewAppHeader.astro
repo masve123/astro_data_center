@@ -23,19 +23,20 @@ import Navbar from "../components/react/Navbar.tsx";
         </div>
         
         <!-- Mobile Menu Toggle Button -->
-<button id="mobile-menu-toggle" class="lg:hidden p-4">
-  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
-      <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />
-  </svg>
-</button>
+        <button id="mobile-menu-toggle" class="lg:hidden p-4 text-gray-800 dark:text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />
+          </svg>
+        </button>
+        
 
-<!-- Mobile Menu (hidden initially) -->
-<div id="mobile-menu" class="hidden lg:hidden">
-  <a href="/" class="block px-4 py-2 text-sm text-gray-700 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">Home</a>
-  <a href="/about" class="block px-4 py-2 text-sm text-gray-700 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">About</a>
-  <a href="/services" class="block px-4 py-2 text-sm text-gray-700 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">Services</a>
-  <!-- Add other links as needed -->
-</div>
+        <!-- Mobile Menu (hidden initially) -->
+        <div id="mobile-menu" class="hidden lg:hidden">
+          <a href="/" class="block px-4 py-2 text-sm text-gray-700 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">Home</a>
+          <a href="/about" class="block px-4 py-2 text-sm text-gray-700 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">About</a>
+          <a href="/services" class="block px-4 py-2 text-sm text-gray-700 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">Services</a>
+          <!-- Add other links as needed -->
+        </div>
 
 
         <!-- Navigation items -->
@@ -171,7 +172,7 @@ import Navbar from "../components/react/Navbar.tsx";
     z-index: 20;
     padding-top: 5rem;
     align-items: center;
-    justify-content: start;
+    justify-content: flex-start;
     overflow-y: auto;
     transition: transform 0.3s ease-in-out;
     transform: translateX(-100%); /* Off-screen initially */
