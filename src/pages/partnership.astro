@@ -3,11 +3,15 @@ import Layout from "../layouts/Layout.astro";
 
 // import PartnerShip from "../components/PartnerShip.astro";
 import SimpleRegistrationForm from "../components/react/material-tailwind/PartnerShip.jsx"
+import PartnerShip from "../components/PartnerShip.astro"
+import PartnersHeroSection from "../components/PartnersHeroSection.astro"
 
 ---
 
 <Layout title="Partnership">
     <main class="mb-40">
+        <PartnersHeroSection />
+        <PartnerShip />
         <SimpleRegistrationForm client:load/>
     </main>
 </Layout>
