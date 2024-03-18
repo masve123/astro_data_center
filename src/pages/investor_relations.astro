@@ -1,0 +1,22 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+// import PartnerShip from "../components/PartnerShip.astro";
+import SimpleRegistrationForm from "../components/react/material-tailwind/PartnerShip.jsx"
+import PartnerShip from "../components/PartnerShip.astro"
+import PartnersHeroSection from "../components/PartnersHeroSection.astro"
+import OurPartners from "../components/OurPartners.astro"
+import InvestorsHeroSection from "../components/InvestorsHeroSection.astro"
+import InvestWithUs from "../components/InvestWithUs.astro"
+import WhatWeAreBuilding from "../components/WhatWeAreBuilding.astro"
+
+---
+
+<Layout title="Partnership">
+    <main class="mb-40">
+        <InvestorsHeroSection />
+        <WhatWeAreBuilding />
+        <InvestWithUs />
+        <SimpleRegistrationForm client:load/>
+    </main>
+</Layout>
