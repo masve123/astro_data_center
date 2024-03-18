@@ -1,0 +1,129 @@
+---
+import Button from "./Button.astro";
+import Container from "./Container.astro";
+---
+<Container>
+<div class="hero-section relative bg-coolGray-50 dark:bg-darker overflow-hidden" id="solutions-hero-section">
+    <div class="container mx-auto flex flex-col-reverse lg:flex-row items-center justify-between text-center lg:text-left gap-12 py-20 px-4">
+      <!-- Text Content -->
+      <div class="w-full lg:w-1/2">
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
+          Next-Gen <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">Computing Services</span>
+        </h1>
+        <p class="mt-8 text-lg text-gray-700 dark:text-gray-100 animate-float" style="animation-delay: 0.1s;">
+            Empower your projects with our cutting-edge <strong>Machine Learning, VFX Rendering,</strong> and <strong>Inference Services</strong>. Built for precision, speed, and scalability.
+        </p>
+        <div class="mt-10 flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+            <!-- For light mode -->
+            <a href="#get-started" class="bg-white border border-gray-300 rounded-md px-8 py-4 text-lg text-gray-800 font-medium hover:bg-gray-50 hover:shadow-md transition-all dark:bg-gray-100 dark:border-gray-100 dark:text-black dark:hover:bg-gray-200">
+                Launch Instance &rarr;
+            </a>
+            <a href="/pricingpage" class="bg-primary border-2 border-primary rounded-md px-8 py-4 text-lg text-white font-medium hover:bg-opacity-90 hover:border-gray-300 transition-all dark:bg-dark dark:border-gray-700 dark:hover:border-gray-300">
+                View Our Plans &rarr;
+            </a>
+          </div>
+      </div>
+      <!-- Interactive Visual Element -->
+  <div class="w-full lg:w-1/2 flex justify-center lg:justify-end items-center">
+    <div class="w-3/4 h-auto relative">
+      <!-- Animated SVG Graphic -->
+      <div class="svg-container relative cursor-pointer">
+        <!-- SVG with Animation -->
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="svg-graphic" style="width:100%; height: auto;">
+          <path fill="none" stroke="url(#gradient1)" stroke-width="4" 
+            d="M 50, 100 a 50,50 0 1,0 100,0 a 50,50 0 1,0 -100,0 "
+            class="path-animation">
+          </path>
+          <path fill="none" stroke="url(#gradient2)" stroke-width="4" 
+            d="M 60, 100 a 40,40 0 1,0 80,0 a 40,40 0 1,0 -80,0 "
+            class="path-animation" style="animation-delay: -5s;">
+          </path>
+          <defs>
+            <linearGradient id="gradient1" gradientTransform="rotate(90)">
+              <stop offset="0%" stop-color="#4b6cb7"/>
+              <stop offset="100%" stop-color="#182848"/>
+            </linearGradient>
+            <linearGradient id="gradient2" gradientTransform="rotate(45)">
+              <stop offset="0%" stop-color="#ff9a9e"/>
+              <stop offset="100%" stop-color="#fad0c4"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+    </div>
+  </div>
+    <!-- Decorative Shapes -->
+    <!-- <div class="hidden lg:block overflow-hidden" style="position: absolute; top: 5%; left: 5%; z-index: -1;">
+      <svg width="200" height="200" fill="none" viewBox="0 0 200 200" aria-hidden="true">
+        <circle cx="100" cy="100" r="100" fill="url(#paint0_linear)" fill-opacity="0.4"></circle>
+        <defs>
+          <linearGradient id="paint0_linear" x1="0" y1="0" x2="200" y2="200" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#8A3FFC"></stop>
+            <stop offset="1" stop-color="#FF4954"></stop>
+          </linearGradient>
+        </defs>
+      </svg>
+    </div> -->
+  </div>
+  </Container>
+  
+  <style>
+    /* Right side animation*/
+    .svg-container {
+      width: 300px;
+      height: 300px;
+    }
+    
+    .svg-graphic {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    .path-animation {
+      animation: rotate-animation 20s linear infinite;
+    }
+    
+    @keyframes rotate-animation {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    /* Hide the SVG container on screens smaller than 768px */
+    @media (max-width: 768px) {
+    .svg-container {
+        display: none;
+    }
+}
+
+    </style>
+
+<style>
+    /* Animation keyframes */
+    @keyframes float {
+        0% {
+            opacity: 0;
+            transform: translate3d(0, 100%, 0);
+        }
+        100% {
+            opacity: 1;
+            transform: none;
+        }
+    }
+
+    /* Apply animation to elements */
+    .animate-float {
+        animation: float 2s ease-out forwards;
+    }
+
+    /* Base hero section styles */
+    .hero-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding: 4rem 1rem;
+    }
+</style>
