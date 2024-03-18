@@ -1,0 +1,159 @@
+---
+// MachineLearningSolution.astro
+import Button from "./Button.astro";
+import Container from "./Container.astro";
+---
+
+<Container>
+  <div class="inference-solution relative dark:bg-darker overflow-hidden" id="inference-solution">
+    <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between text-center lg:text-left gap-12 py-20 px-4">
+      <!-- Visual Element - Styling Block -->
+       <!-- Styling Block -->
+       <div class="w-full lg:w-1/2 flex justify-center lg:justify-start items-center">
+        <div class="style-container relative w-3/4 h-auto">
+          <!-- Fancy CSS Styling Placeholder -->
+          <div class="fancy-css-styling relative">
+            <!-- Similar Animated SVG Graphic -->
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="svg-graphic">
+              <path fill="none" stroke="url(#gradient1)" stroke-width="4" 
+                d="M 50, 100 a 50,50 0 1,0 100,0 a 50,50 0 1,0 -100,0 "
+                class="path-animation">
+              </path>
+              <path fill="none" stroke="url(#gradient2)" stroke-width="4" 
+                d="M 60, 100 a 40,40 0 1,0 80,0 a 40,40 0 1,0 -80,0 "
+                class="path-animation" style="animation-delay: -5s;">
+              </path>
+              <defs>
+                <linearGradient id="gradient1" gradientTransform="rotate(90)">
+                  <stop offset="0%" stop-color="#4b6cb7"/>
+                  <stop offset="100%" stop-color="#182848"/>
+                </linearGradient>
+                <linearGradient id="gradient2" gradientTransform="rotate(45)">
+                  <stop offset="0%" stop-color="#ff9a9e"/>
+                  <stop offset="100%" stop-color="#fad0c4"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <!-- Text Content -->
+      <div class="w-full lg:w-1/2">
+        <h2 class="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
+          First Class Inference
+        </h2>
+        <ul class="mt-8 text-lg text-gray-700 dark:text-gray-100 space-y-4 animate-float" style="animation-delay: 0.1s;">
+          <li>
+            <strong>Optimize Costs:</strong> Streamline your budget with competitive pricing and efficient resource use for inference workloads.
+          </li>
+          <li>
+            <strong>Fast Spin-Up and Scaling:</strong> Quick and responsive scaling to meet your application demands, delivering performance when you need it.
+          </li>
+          <li>
+            <strong>Easy Access/Safe Storage:</strong> Simplified data access paired with secure storage, ensuring your inference data is both accessible and protected.
+          </li>
+        </ul>
+        <div class="mt-10 flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+          <a href="#get-started" class="bg-white border border-gray-300 rounded-md px-8 py-4 text-lg text-gray-800 font-medium hover:bg-gray-50 hover:shadow-md transition-all dark:bg-gray-100 dark:border-gray-100 dark:text-black dark:hover:bg-gray-200">
+            Launch Instance &rarr;
+          </a>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</Container>
+
+
+
+<!-- Include your styles for the component here, or link to an external stylesheet -->
+<style>
+    /* Right side animation*/
+    .svg-container {
+      width: 300px;
+      height: 300px;
+    }
+    
+    .svg-graphic {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    .path-animation {
+      animation: rotate-animation 20s linear infinite;
+    }
+    
+    @keyframes rotate-animation {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    </style>
+    
+
+<style>
+    /* Animation keyframes */
+    @keyframes float {
+        0% {
+            opacity: 0;
+            transform: translate3d(0, 100%, 0);
+        }
+        100% {
+            opacity: 1;
+            transform: none;
+        }
+    }
+
+    /* Apply animation to elements */
+    .animate-float {
+        animation: float 2s ease-out forwards;
+    }
+
+    /* Base hero section styles */
+    .hero-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding: 4rem 1rem;
+    }
+</style>
+
+<style>
+    /* Adjust the hero section for mobile */
+    @media (max-width: 768px) {
+        .inference-solution .container {
+            flex-direction: column-reverse;
+            text-align: center;
+            gap: 8px; /* Adjust gap as needed */
+        }
+
+        /* Adjust the width for mobile */
+        .inference-solution .style-container,
+        .inference-solution .svg-container {
+            width: 100%;
+            height: auto;
+            margin: 0 auto; /* Center the container */
+        }
+
+        /* Hide the SVG container on screens smaller than 768px */
+        .svg-container {
+            display: none;
+        }
+
+        .inference-solution h2,
+        .inference-solution p,
+        .inference-solution .button-container {
+            padding: 0 15px; /* Add some padding */
+        }
+
+        /* Center the content and buttons on mobile */
+        .inference-solution .button-container {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+</style>

@@ -1,34 +1,27 @@
 ---
-import Solution from "../components/Solution.astro";
-import Features from "../components/Features.astro";
-import HeroSection from "../components/HeroSection.astro";
-import Layout from "../layouts/Layout.astro";
-import Reviews from "../components/Reviews.astro";
-import Pricing from "../components/Pricing.astro";
-import ContactUs from "../components/ContactUs.astro";
-import DetailedSolutions from "../components/DetailedSolutions.astro";
-import Faqs from "../components/Faqs.astro";
 
+import Layout from "../layouts/Layout.astro";
+import Pricing from "../components/Pricing.astro";
+import Faqs from "../components/Faqs.astro";
 import Blog from "../components/Blog.astro";
-import NewHeroSection from "../components/NewHeroSection.astro";
-import Faq from "../components/Faq.astro";
-import NewFeatures from "../components/NewFeatures.astro";
-import Products from "../components/Products.astro";
-import SolutionContent from "../components/SolutionContent.astro";
-import ByNumber from "../components/ByNumber.astro";
 
 import DescriptivePricing from "../components/DescriptivePricing.astro";
 import SolutionsHeroSection from "../components/SolutionsHeroSection.astro";
 import OurSolutions from "../components/OurSolutions.astro";
+import MachineLearningSolution from "../components/MachineLearningSolution.astro";
+import VFXRenderingSolution from "../components/VFXRenderingSolution.astro";
+import InferenceSolution from "../components/InferenceSolution.astro";
 ---
 
 <Layout title="Welcome to SnowCell.">
     <main class="mb-40">
         <SolutionsHeroSection />
+        <MachineLearningSolution />
+        <!-- <VFXRenderingSolution /> -->
+        <!-- <InferenceSolution /> -->
         <OurSolutions />
-        <DetailedSolutions />
+        <!-- <DetailedSolutions /> -->
         <Pricing />
         <Faqs />
-        <Blog />
     </main>
 </Layout>
