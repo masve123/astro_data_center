@@ -57,71 +57,50 @@ import Container from "./Container.astro";
 
 
 
-<!-- Include your styles for the component here, or link to an external stylesheet -->
 <style>
-    /* Right side animation*/
+  /* General styling for the SVG container */
+  .svg-container {
+    width: 300px;
+    height: 300px;
+    display: flex; /* Ensures container uses flex layout */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    margin: 0 auto; /* Center the container itself if within a flex parent */
+  }
+
+  /* Styling for the SVG graphic to ensure it fills the container but maintains aspect ratio */
+  .svg-graphic {
+    width: 100%; /* Fill the container width */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  /* Animation for the path within the SVG to rotate */
+  .path-animation {
+    animation: rotate-animation 20s linear infinite;
+  }
+
+  /* Keyframes for rotation animation */
+  @keyframes rotate-animation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* Media query to hide the SVG container on screens smaller than 768px */
+  @media (max-width: 768px) {
     .svg-container {
-      width: 300px;
-      height: 300px;
+      display: none !important; /* Force hiding the SVG container */
     }
-    
-    .svg-graphic {
-      max-width: 100%;
-      height: auto;
-    }
-    
-    .path-animation {
-      animation: rotate-animation 20s linear infinite;
-    }
-    
-    @keyframes rotate-animation {
-      from {
-        transform: rotate(0deg);
-      }
-      to {
-        transform: rotate(360deg);
-      }
-    }
-    /* Adjust the hero section for mobile */
-    @media (max-width: 768px) {
-        .machine-learning-solution .container {
-            flex-direction: column-reverse;
-            text-align: center;
-            gap: 8px; /* Adjust gap as needed */
-        }
+  }
+</style>
 
-        
 
-        /* Adjust the width for mobile */
-        .machine-learning-solution .style-container,
-        .machine-learning-solution .svg-container {
-            width: 100%;
-            height: auto;
-            margin: 0 auto; /* Center the container */
-        }
-
-        /* Hide the SVG container on screens smaller than 768px */
-        .svg-container {
-            display: none;
-        }
-        
-
-        .machine-learning-solution h2,
-        .machine-learning-solution p,
-        .machine-learning-solution .button-container {
-            padding: 0 15px; /* Add some padding */
-        }
-
-        /* Center the content and buttons on mobile */
-        .machine-learning-solution .button-container {
-            flex-direction: column;
-            align-items: center;
-        }
-    }
-    </style>
 
 <style>
-    /* Animation keyframes */
+    /* Animation keyframes text */
     @keyframes float {
         0% {
             opacity: 0;
