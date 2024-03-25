@@ -18,7 +18,7 @@ import AccordionAlwaysOpen from "./react/material-tailwind/AccordionAlwaysOpen.j
 
 ---
 
-<section class="relative pt-32 lg:pt-36 animate-rise">
+<section class="relative min-h-screen pt-32 lg:pt-36 animate-rise">
     <Container className={"flex flex-col lg:flex-row gap-10 lg:gap-12"}>
         <div class="absolute w-full lg:w-1/2 inset-y-0 lg:right-0 ">
             <!-- <span class="absolute -left-6 md:left-4 top-24 lg:top-28 w-24 h-24 rotate-90 skew-x-12 rounded-3xl bg-green-400 blur-xl opacity-60 lg:opacity-95 lg:block hidden"></span> -->
@@ -28,32 +28,30 @@ import AccordionAlwaysOpen from "./react/material-tailwind/AccordionAlwaysOpen.j
         
         <!--Text container -->
         <div class="relative flex flex-col items-center text-center lg:text-left lg:py-7 xl:py-8 
-        lg:items-start lg:max-w-none max-w-3xl mx-auto lg:mx-0 lg:flex-1 lg:w-1/2">
+        lg:items-start lg:max-w-none max-w-3xl mx-auto lg:mx-0 lg:flex-1 lg:w-1/2 min-h-screen lg:min-h-0">
         
-        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-6xl font-bold text-heading-1 dark:text-gray-100 leading-none sm:leading-tight">
+        <h1 class="text-6xl sm:text-6xl md:text-7xl lg:text-6xl xl:text-6xl font-bold text-heading-1 dark:text-gray-100 leading-none sm:leading-tight">
             The SnowCell <span class="text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 via-primary to-green-600">GPU Cloud</span> is where Innovation meets Speed
         </h1>
         
               
-            <Paragraph className="mt-8 text-lg text-gray-700 dark:text-gray-100 animate-float" style="animation-delay: 0.1s;">
+            <Paragraph className="mt-8 text-2xl sm:text-3xl text-gray-700 dark:text-gray-100 animate-float" style="animation-delay: 0.1s;">
                 SnowCell is a specialized cloud, providing cutting-edge infrastructure for demanding computational tasks.
             </Paragraph>
             
 
             <div class="mt-10 flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
-                <!-- For light mode -->
-                <a href="#get-started" class="bg-white border border-gray-300 rounded-md px-6 py-3 text-gray-800 font-medium hover:bg-gray-50 hover:shadow-md transition-all dark:bg-gray-100 dark:border-gray-100 dark:text-black dark:hover:bg-gray-200">
-                  Launch Instance &rarr;
+                <a href="#get-started" class="whitespace-nowrap bg-white border border-gray-300 rounded-md px-8 py-4 text-lg text-gray-800 font-medium hover:bg-gray-50 hover:shadow-md transition-all dark:bg-gray-100 dark:border-gray-100 dark:text-black dark:hover:bg-gray-200 md:px-8"> {/* md:px-8 to slightly reduce padding at breakpoint*/}
+                  Get started for free &rarr;
                 </a>
-                <a href="/pricingpage" class="bg-primary border-2 border-primary rounded-md px-6 py-3 text-white font-medium hover:bg-opacity-90 hover:border-gray-300 transition-all dark:bg-dark dark:border-gray-700 dark:hover:border-gray-300">
+                <a href="#plans-pricing" class="whitespace-nowrap bg-primary border-2 border-primary rounded-md px-8 py-4 text-lg text-white font-medium hover:bg-opacity-90 hover:border-gray-300 transition-all dark:bg-dark dark:border-gray-700 dark:hover:border-gray-300 md:px-8"> {/* md:px-8 to slightly reduce padding at breakpoint*/}
                   Plans and pricing &rarr;
                 </a>
               </div>
-              
         </div>
         
         <!-- Image container -->
-        <div class="lg:w-1/2 relative mx-auto max-w-3xl">
+        <div class="relative mx-auto max-w-3xl lg:w-1/2">
             <!-- <img src="/images/machine-learning.svg" alt="Hero image" class="rounded-3xl lg:max-w-lg h-auto object-contain mx-auto"> -->
             <!-- <BannerCarousel /> -->
 
@@ -64,7 +62,7 @@ import AccordionAlwaysOpen from "./react/material-tailwind/AccordionAlwaysOpen.j
         
     </Container>
     
-    <ByNumber/>
+    <!-- <ByNumber/> -->
 </section>
 
 <!-- Add sliding effects -->
