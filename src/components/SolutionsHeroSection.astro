@@ -1,6 +1,8 @@
 ---
 import Button from "./Button.astro";
 import Container from "./Container.astro";
+// lottie
+import LottieAnimation from "astro-integration-lottie/Lottie.astro";
 ---
 <Container>
 <div class="hero-section relative dark:bg-darker overflow-hidden" id="solutions-hero-section">
@@ -23,12 +25,16 @@ import Container from "./Container.astro";
             </a>
           </div>
       </div>
+
+         <!-- Lottie Animation -->
+         <div class="container relative mx-auto max-w-3xl lg:w-1/2">
+          <LottieAnimation src="public/lottie/Animation-cloud-lottie.json" autoplay="visible" />
+      </div>
+
       <!-- Interactive Visual Element -->
-  <div class="w-full lg:w-1/2 flex justify-center lg:justify-end items-center">
+  <!-- <div class="w-full lg:w-1/2 flex justify-center lg:justify-end items-center">
     <div class="w-3/4 h-auto relative">
-      <!-- Animated SVG Graphic -->
       <div class="svg-container relative cursor-pointer">
-        <!-- SVG with Animation -->
         <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="svg-graphic" style="width:100%; height: auto;">
           <path fill="none" stroke="url(#gradient1)" stroke-width="4" 
             d="M 50, 100 a 50,50 0 1,0 100,0 a 50,50 0 1,0 -100,0 "
@@ -51,7 +57,7 @@ import Container from "./Container.astro";
         </svg>
       </div>
     </div>
-  </div>
+  </div> -->
   </div>
   </Container>
   
